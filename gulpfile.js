@@ -1,6 +1,5 @@
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
-const babel = require('gulp-babel');
 const cleanCSS = require('gulp-clean-css');
 const { parallel, watch, src, dest } = require('gulp');
 const uglify = require('gulp-uglify');
@@ -10,6 +9,8 @@ const mode = require('gulp-mode')({
     default: "development",
     verbose: false
 });
+const webpack = require('webpack-stream');
+const named = require('vinyl-named');
 
 function processcss() {
     return src('client/src/scss/**/*.scss')
@@ -26,11 +27,8 @@ function processcss() {
 function transpileJS() {
     return src('client/src/javascript/**/*.js')
         .pipe(mode.development(sourcemaps.init()))
-        .pipe(babel({
-            presets: [
-                '@babel/preset-env'
-            ]
-        }))
+        .pipe(named())
+        .pipe(webpack({}))
         .pipe(mode.production(uglify()))
         .pipe(mode.development(sourcemaps.write('../../dist/javascript/maps')))
         .pipe(dest('client/dist/javascript'))
