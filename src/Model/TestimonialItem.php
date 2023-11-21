@@ -12,7 +12,8 @@ use SilverStripe\ORM\DataObject;
  *
  * @property int $Sort
  * @property string $Quote
- * @property string $Attribution
+ * @property string $AttributionName
+ * @property string $AttributionTitle
  * @property int $ElementID
  * @property int $ImageID
  * @method \BiffBangPow\Element\TestimonialsElement Element()
@@ -34,11 +35,12 @@ class TestimonialItem extends DataObject
     ];
     private static $db = [
         'Quote' => 'Text',
-        'Attribution' => 'Varchar'
+        'AttributionName' => 'Varchar',
+        'AttributionTitle' => 'Varchar'
     ];
     private static $summary_fields = [
         'Image.CMSThumbnail' => 'Image',
-        'Attribution' => 'Attribution',
+        'AttributionName' => 'Attribution',
         'Quote.LimitWordCount' => 'Quote'
     ];
 

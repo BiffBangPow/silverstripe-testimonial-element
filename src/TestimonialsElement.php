@@ -2,6 +2,7 @@
 
 namespace BiffBangPow\Element;
 
+use BiffBangPow\Element\Control\TestimonialsElementController;
 use BiffBangPow\Element\Model\TestimonialItem;
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\GridField\GridField;
@@ -22,6 +23,12 @@ class TestimonialsElement extends BaseElement
     private static $has_many = [
         'Testimonials' => TestimonialItem::class
     ];
+
+    private static $controller_class = TestimonialsElementController::class;
+
+    private static $include_default_js = true;
+
+    private static $include_default_css = true;
 
     public function getCMSFields()
     {
