@@ -40,8 +40,8 @@
         </div>
         <div class="glide__arrows" data-glide-el="controls">
             <button class="glide__arrow glide__arrow--left" data-glide-dir="<" aria-label="<%t Testimonials.Previous 'Previous Slide' %>">
-                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" aria-labelledby="title">
-                    <title id="title"><%t Testimonials.LeftArrow 'Arrow pointing left' %></title>
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" aria-labelledby="prev-title">
+                    <title id="prev-title"><%t Testimonials.LeftArrow 'Arrow pointing left' %></title>
                     <style>svg {
                         fill: #000000
                     }</style>
@@ -50,8 +50,8 @@
                 </svg>
             </button>
             <button class="glide__arrow glide__arrow--right" data-glide-dir=">" aria-label="<%t Testimonials.Next 'Next Slide' %>">
-                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" aria-labelledby="title">
-                    <title id="title"><%t Testimonials.RightArrow 'Arrow pointing right' %></title>
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" aria-labelledby="next-title">
+                    <title id="next-title"><%t Testimonials.RightArrow 'Arrow pointing right' %></title>
                     <style>svg {
                         fill: #000000
                     }</style>
