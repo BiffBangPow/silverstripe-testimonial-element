@@ -39,7 +39,7 @@
             </ul>
         </div>
         <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<" aria-label="<%t Testimonials.Previous 'Previous Slide' %>">
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
                     <style>svg {
                         fill: #000000
@@ -48,7 +48,7 @@
                         d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
                 </svg>
             </button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">" aria-label="<%t Testimonials.Next 'Next Slide' %>">
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
                     <style>svg {
                         fill: #000000
@@ -60,7 +60,7 @@
         </div>
         <div class="glide__bullets" data-glide-el="controls[nav]">
             <% loop $Testimonials %>
-                <button class="glide__bullet" data-glide-dir="={$Pos(0)}"></button>
+                <button class="glide__bullet" data-glide-dir="={$Pos(0)}" aria-label="<%t Testimonials.JumpTo 'Jump to slide' %> $Pos"></button>
             <% end_loop %>
         </div>
     </div>
